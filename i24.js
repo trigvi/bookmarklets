@@ -37,7 +37,8 @@
             var json = JSON.parse(responseBody);
             var trustedPayload = JSON.parse(json.data.article.trustedPayload);
             var articleContents = trustedPayload.articleBody;
-            articleContents = articleContents.replace(/&#46;/g, ".<br>&nbsp;<br>");
+            articleContents = articleContents.replace(/&#46;/g, ".");
+            articleContents = articleContents.replace(/([^\.0-9]+)(\.)([^\.0-9]+)/g, "$1.<br>&nbsp;<br>$3");
 
             // Replace current page's HTML with article's
             var el = document.createElement("div");
