@@ -11,8 +11,8 @@
 
             // Extract article
             var responseBody = await response.text();
-            var regex = /<div class="entry__content" id="article-body">([\s\S]+?)/;
-            // var regex = /<div class="entry__content" id="article-body">([\s\S]+?)<\/*div/;
+            // var regex = /<div class="entry__content" id="article-body">([\s\S]+?)/;
+            var regex = /<div class="entry__content" id="article-body">([\s\S]+?)<\/*div/;
             var found = responseBody.match(regex);
             var articleContents = found[1].trim().replace(/<p>/g, "\n\n<p>");
 

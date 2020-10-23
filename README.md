@@ -1,3 +1,3 @@
-# Trigvi Bookmarklets
+# Bookmarklets
 
-A random collection of bookmarklets for personal use.
+Bookmarklets for personal use.
